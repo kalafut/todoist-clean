@@ -14,6 +14,11 @@ import (
 var API_KEY = os.Getenv("TODOIST_API_KEY")
 
 func main() {
+	if API_KEY == "" {
+		fmt.Println("TODOIST_API_KEY environment variable not set. You can find your API key at https://todoist.com/app/settings/integrations/developer")
+		return
+	}
+
 	// Get all tasks
 	tasks := getTasks()
 
