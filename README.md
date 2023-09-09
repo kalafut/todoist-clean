@@ -20,7 +20,7 @@ You can get Go here: https://go.dev/doc/install
 
 ## Usage
 
-1. Install the app: `go install github.com/kalafut/todoist-clean`
+1. Install the app: `go install github.com/kalafut/todoist-clean@latest`
 1. Get an API token from Todoist: https://todoist.com/app/settings/integrations/developer
 1. Set the `TODOIST_API_TOKEN` environment variable to the token you got above: `export TODOIST_API_TOKEN=<your token>`
 

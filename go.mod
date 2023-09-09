@@ -1,4 +1,4 @@
-module todoist-clean
+module github.com/kalafut/todoist-clean
 
 go 1.21.0
 
