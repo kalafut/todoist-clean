@@ -11,6 +11,12 @@ import (
 	"github.com/samber/lo"
 )
 
+type Task struct {
+	ID      string `json:"id"`
+	Content string `json:"content"`
+	cleaned string
+}
+
 var API_KEY = os.Getenv("TODOIST_API_KEY")
 
 func main() {
@@ -19,7 +25,6 @@ func main() {
 		return
 	}
 
-	// Get all tasks
 	tasks := getTasks()
 
 	if len(tasks) == 0 {
@@ -41,13 +46,6 @@ func main() {
 	}
 
 	updateTasks(tasks)
-
-}
-
-type Task struct {
-	ID      string `json:"id"`
-	Content string `json:"content"`
-	cleaned string
 }
 
 func updateTasks(tasks []*Task) {
@@ -66,6 +64,7 @@ func updateTasks(tasks []*Task) {
 		if err != nil {
 			panic(err)
 		}
+
 		req.Header.Add("Authorization", "Bearer "+API_KEY)
 		req.Header.Add("Content-Type", "application/json")
 
