@@ -24,4 +24,4 @@ You can get Go here: https://go.dev/doc/install
 1. Get an API token from Todoist: https://todoist.com/app/settings/integrations/developer
 1. Set the `TODOIST_API_TOKEN` environment variable to the token you got above: `export TODOIST_API_TOKEN=<your token>`
 
-1. Run `todoist-clean`
+1. Run `todoist-clean` (it will show you what it wants to change before making the changes)
